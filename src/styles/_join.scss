@@ -1,0 +1,63 @@
+@use 'variables';
+
+.join {
+    background-image: url(../../dist/images/bg-estrelado.png);
+    background-size: cover  ;
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-bottom: 5%;
+
+        &__socials {
+            margin: 5% 0px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            
+
+            &__text {
+                width: 80%
+            }
+
+            .social-media {
+                width: 1000px;
+
+                h3 {
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                }
+            }
+            .networks{
+                color: white;
+            }
+            .bi:nth-child(2) {
+                margin-left: 1%;
+                margin-right: 1%;
+            }
+        }
+
+        &__secondary{
+            width: 100%;
+            text-align: center;
+
+            .button {
+                display: inline-block;
+                margin-top: 5%;
+                font-size: 24px;
+                background-color: variables.$yellow02;
+                border-color: variables.$yellow;
+
+                &:hover {
+                    color: white;
+                    box-shadow: 0px 8px 8px rgba(255, 255, 255, 0.4);
+                }
+            }
+        }
+    }
+}

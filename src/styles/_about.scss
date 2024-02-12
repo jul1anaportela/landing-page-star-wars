@@ -1,0 +1,63 @@
+@use 'variables';
+
+.about {
+    background-image: url(../../dist/images/bg-estrelado.png);
+    background-size: cover  ;
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap; /* Permitindo que os itens se movam para a próxima linha quando não couberem na largura */
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+
+        &__main {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+
+            p {
+                margin-top: 24px;
+            }
+        }
+
+        &__secondary {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+            
+            .cards {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 24px;
+
+                .card {
+                    width: 300px;
+                    background-color: white;
+                    box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.4);
+                    
+                    p {
+                        text-align: justify;
+                        margin: 5%;
+                    }
+
+                    &:first-child {
+                        border-top-left-radius: 45px;
+                        border-bottom-right-radius: 45px;
+                    }
+
+                    &:nth-child(2) {
+                        border-radius: 15px;
+                    }
+
+                    &:last-child {
+                        border-top-right-radius: 45px;
+                        border-bottom-left-radius: 45px;
+                    }
+                }
+            }
+        }
+    }
+}

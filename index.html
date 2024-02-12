@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>star wars</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="dist/css/main.css">
+</head>
+<body>
+    <header class="header">
+        <audio class="hoverSound">
+            <source src="./assets/audio/sabre-luz.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+        <div class="header__container">
+            <h1>
+                <img class="header__logo" src="./dist/images/logo.png" alt="logo star wars">
+            </h1>
+            <ul class="header__links">
+                <li class="header__links__item"><button class="button saber-button">home</button></li>
+                <li class="header__links__item"><button class="button saber-button">about</button></li>
+                <li class="header__links__item"><button class="button saber-button">explore</button></li>
+            </ul>
+            <button class="button button--white saber-button">join the force</button>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero__content">
+            <div class="hero__content__branding">
+                <img class="hero__content__branding__img"  src="./dist/images/hero.png" alt="death star">
+            </div>
+            <div class="hero__content__text">
+                <h2 class="title--white">
+                    welcome to the <br> star wars universe
+                </h2>
+                <p class="text--yellow">
+                    Discover, Connect and Celebrate the Galact Saga
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="aboutID" class="about">
+        <div class="about__content">
+            <div class="about__content__main">
+                <h2 class="title--yellow">About</h2>
+                <p class="text--white">
+                    Explore the saga that has captivated generations. Since 1977, Star Wars has been a source of inspiration for millions around the world. Discover the history, characters and fascinating worlds that make up this cosmic epic.
+                </p>
+            </div>
+            <div class="about__content__secondary">
+                <h2 class="title--yellow">
+                    what we <br>offer
+                </h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card__header">
+                            <img src="./dist/images/card1_header.png" alt="">
+                        </div>
+                        <div class="card__body">
+                            <h4 class="title--blue">news and updates</h4>
+                            <p class="text--black">
+                                Stay up to date with the latest news, movie releases, series, games and special events related to Star Wars.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__header">
+                            <img src="./dist/images/card2_header.png" alt="">
+                        </div>
+                        <div class="card__body">
+                            <h4 class="title--blue">exclusive products</h4>
+                            <p class="text--black">
+                                Discover a wide selection of officially licensed products, including toys, clothing, collectibles and much more. Find something for every fan in your life!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__header">
+                            <img src="./dist/images/card3_header.png" alt="">
+                        </div>
+                        <div class="card__body">
+                            <h4 class="title--blue">exclusive content</h4>
+                            <p class="text--black">
+                                Get access to exclusive content, behind the scenes, interviews with cast and crew, and much more.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="exploreID" class="explore">
+        <div class="explore__content">
+            <h2 class="title--yellow">explore the <br> universe</h2>
+            <nav class="explore__content__tabs">
+                <button data-tab-button="movies" class="text--white explore__content__tabs__button">movies</button>
+                <button data-tab-button="series" class="text--white explore__content__tabs__button">tv series</button>
+                <button data-tab-button="books" class="text--white explore__content__tabs__button">books</button>
+                <button data-tab-button="games" class="text--white explore__content__tabs__button">games</button>
+            </nav>
+
+            <div data-tab-id="movies" class="explore__content__item">
+                <img src="./dist/images/movies.png" alt="">
+                <div class="explore__content__item__text">
+                    <p class="text--black">
+                        Relive the epic moments of the saga by watching the classic films and the new additions to the franchise.Relive the epic moments of the saga by watching the classic films and the new additions to the franchise. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="join">
+        <div class="join__content">
+            <h2 class="title--yellow">join our <br>community</h2>
+            <div class="join__content__socials">
+                <p class="join__content__socials__text text--white">
+                    Keep up to date with the latest news and join in the conversation! Follow us on social media and join the community of passionate Star Wars fans.
+                </p>
+                <div class="social-media">
+                    <h3 class="title--yellow">socials</h3>
+                    <div class="networks">
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-tiktok"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="join__content__secondary">                
+                <h3 class="title--yellow ">ready to start <br>your journey?</h3>            
+                <div class="button-container">
+                    <button class="button">join to the force</button>
+                </div>                
+            </div>
+          
+
+            
+        </div>
+    </section>
+
+    <script src="./dist/js/main.js"></script>
+</body>
+</html>
