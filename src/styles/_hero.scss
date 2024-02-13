@@ -1,6 +1,15 @@
 @use 'variables';
 
 .hero {
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    }
 
     &__content {
         position: relative;

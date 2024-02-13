@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const saberButtons = document.querySelectorAll('.saber-button');
-    const links = document.querySelectorAll('.saber-button');
+    const links = document.querySelectorAll('.header__links__item a');
     const hoverSound = document.querySelector('.hoverSound');
     const buttons = document.querySelectorAll('[data-tab-button]');
     const btnJoinForce = document.querySelector('[data-target]');
+    const sections = document.querySelectorAll('section[id]'); // Seleciona todas as seções com um ID definido
 
     saberButtons.forEach(button => {
         button.addEventListener("mouseenter", function() {
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    links.forEach(link => { //usado para vários botões com o mesmo atributo (forEact)
+    links.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
@@ -21,20 +22,18 @@ document.addEventListener('DOMContentLoaded', function() {
             // Removendo a classe 'active' de todos os links
             links.forEach(link => {
                 link.classList.remove('active');
-            });            
+            });
             // Adicionando a classe 'active' ao link clicado
             this.classList.add('active');
         });
     });
 
-    btnJoinForce.addEventListener('click', function(e) { //não precisa usar o forEach ja que tem apenas 1 botao
+    btnJoinForce.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('data-target');
         const targetElement = document.querySelector(targetId);
         smoothScrollTo(targetElement);
     });
-    
-    
 
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function(botao) {
@@ -46,6 +45,31 @@ document.addEventListener('DOMContentLoaded', function() {
             botao.target.classList.add('explore__content__tabs__button--is-active'); //botao
         })
     }
+
+    // Adiciona a classe 'active' ao link correspondente à seção visível na página
+    window.addEventListener('scroll', function() {
+        let currentSection = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (scrollY >= sectionTop - sectionHeight / 3) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+
+        // Remove a classe 'active' de todos os links
+        links.forEach(link => {
+            link.classList.remove('active');
+        });
+
+        // Adiciona a classe 'active' ao link correspondente à seção atual
+        const activeLink = document.querySelector(`.header__links__item a[href="#${currentSection}"]`);
+        if (activeLink) {
+            activeLink.classList.add('active');
+        }
+    });
 });
 
 function smoothScrollTo(target) {
@@ -55,7 +79,6 @@ function smoothScrollTo(target) {
         behavior: 'smooth'
     });
 }
-
 
 function removeBotaoAtivo() {
     const buttons = document.querySelectorAll('[data-tab-button]');

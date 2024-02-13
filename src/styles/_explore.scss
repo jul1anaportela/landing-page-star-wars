@@ -4,6 +4,16 @@
     background-image: url(../../dist/images/bg-estrelado.png);
     background-size: cover;
 
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    }
+
     &__content {
         text-align: center;
         align-items: center;
@@ -13,6 +23,12 @@
         padding-bottom: 5%;
 
         &__tabs{
+            @media (max-width: 768px) {
+                font-size: 12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
             &__button {
                 margin-top: 24px;
                 margin-bottom: 5%;
@@ -54,6 +70,18 @@
                 p{
                     margin-left: 10%;
                     text-align: justify;
+                }
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+
+                img {
+                    width: 200px;
+                }
+
+                &--is-active {
+                    display: block;
                 }
             }
         }

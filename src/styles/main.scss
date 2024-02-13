@@ -64,6 +64,7 @@ body {
     text-shadow: 0px 4px 4px rgba(239, 216, 17, 0.4);
 }
 
+
 .title--yellow {
     @include title();
     color: variables.$yellow;
@@ -88,6 +89,11 @@ body {
     cursor: pointer;
     font-size: 18px;
     padding: 8px 14px;
+
+    @media (max-width: 768px) {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
 
     &:hover {
         color: variables.$yellow;
