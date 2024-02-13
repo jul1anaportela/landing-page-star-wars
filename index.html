@@ -21,14 +21,14 @@
                 <img class="header__logo" src="./dist/images/logo.png" alt="logo star wars">
             </h1>
             <ul class="header__links">
-                <li class="header__links__item"><button class="button saber-button">home</button></li>
-                <li class="header__links__item"><button class="button saber-button">about</button></li>
-                <li class="header__links__item"><button class="button saber-button">explore</button></li>
+                <li class="header__links__item"><a href="#home" class="button saber-button active">home</a></li>
+                <li class="header__links__item"><a href="#aboutID" class="button saber-button">about</a></li>
+                <li class="header__links__item"><a href="#exploreID" class="button saber-button">explore</a></li>
             </ul>
-            <button class="button button--white saber-button">join the force</button>
+            <button data-target="#join-force" class="button button--white saber-button">join the force</button>
         </div>
     </header>
-    <section class="hero">
+    <section id="home" class="hero">
         <div class="hero__content">
             <div class="hero__content__branding">
                 <img class="hero__content__branding__img"  src="./dist/images/hero.png" alt="death star">
@@ -100,13 +100,13 @@
         <div class="explore__content">
             <h2 class="title--yellow">explore the <br> universe</h2>
             <nav class="explore__content__tabs">
-                <button data-tab-button="movies" class="text--white explore__content__tabs__button">movies</button>
+                <button data-tab-button="movies" class="text--white explore__content__tabs__button explore__content__tabs__button--is-active">movies</button>
                 <button data-tab-button="series" class="text--white explore__content__tabs__button">tv series</button>
                 <button data-tab-button="books" class="text--white explore__content__tabs__button">books</button>
                 <button data-tab-button="games" class="text--white explore__content__tabs__button">games</button>
             </nav>
 
-            <div data-tab-id="movies" class="explore__content__item">
+            <div data-tab-id="movies" class="explore__content__item explore__content__item--is-active">
                 <img src="./dist/images/movies.png" alt="">
                 <div class="explore__content__item__text">
                     <p class="text--black">
@@ -114,10 +114,39 @@
                     </p>
                 </div>
             </div>
+
+            <div data-tab-id="series" class="explore__content__item">
+                <img src="./dist/images/series.png" alt="">
+                <div class="explore__content__item__text">
+                    <p class="text--black">
+                        Dive deeper into the expanded universe through exciting television series such as The Mandalorian, Clone Wars and many more.
+                    </p>
+                </div>
+            </div>
+
+            <div data-tab-id="books" class="explore__content__item">
+                <img src="./dist/images/books.png" alt="">
+                <div class="explore__content__item__text">
+                    <p class="text--black">
+                        Discover additional stories, background details and exciting adventures in the Star Wars books and comics.
+                    </p>
+                </div>
+            </div>
+
+            <div data-tab-id="games" class="explore__content__item">
+                <img src="./dist/images/games.png" alt="">
+                <div class="explore__content__item__text">
+                    <p class="text--black">
+                        Get into the action and challenge yourself in a variety of electronic games inspired by Star Wars.
+                    </p>
+                </div>
+            </div>
+
+            
         </div>
     </section>
 
-    <section class="join">
+    <section id="join-force" class="join">
         <div class="join__content">
             <h2 class="title--yellow">join our <br>community</h2>
             <div class="join__content__socials">
@@ -140,12 +169,12 @@
                     <button class="button">join to the force</button>
                 </div>                
             </div>
-          
-
-            
         </div>
     </section>
 
+    <footer class="footer">
+        <p class="text--white--small">&copy; 2024 Star Wars. All rights reserved.</p>
+    </footer>
     <script src="./dist/js/main.js"></script>
 </body>
 </html>
